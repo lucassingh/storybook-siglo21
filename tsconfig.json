@@ -27,6 +27,7 @@
         },
         "declaration": true,
         "outDir": "dist",
+        "declarationMap": true,
         "declarationDir": "dist"
     },
     "include": [
