@@ -21,13 +21,12 @@ export const Siglo21ButtonComponent: React.FC<Siglo21ButtonComponentProps> = ({
     loadingText = 'Cargando...',
     disabled,
     startIcon,
-    color = 'primary', // Valor por defecto
+    color = 'primary',
     ...props
 }) => {
     const theme = useTheme();
 
     const getButtonStyles = () => {
-        // Solo aplicar estilos personalizados para el color primary
         if (color === 'primary') {
             if (variant === 'contained') {
                 return {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import { appTheme } from '../src/config/theme';
+import siglo21Theme from '../config/theme';
 
 interface ThemeProps {
     children: React.ReactNode;
@@ -9,7 +9,7 @@ interface ThemeProps {
 }
 
 export const Theme = ({ children, isDocs = false }: ThemeProps) => (
-    <ThemeProvider theme={appTheme}>
+    <ThemeProvider theme={siglo21Theme}>
         <CssBaseline />
         <div
             style={{

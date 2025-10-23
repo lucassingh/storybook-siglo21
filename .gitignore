@@ -25,3 +25,14 @@ dist-ssr
 
 *storybook.log
 storybook-static
+src
+.storybook
+*.local
+*.config.*
+coverage
+.storybook
+vitest.config.*
+public
+eslint.config.*
+*.test.*
+*.stories.*

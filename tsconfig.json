@@ -24,12 +24,16 @@
             "@/*": [
                 "./src/*"
             ]
-        }
+        },
+        "declaration": true,
+        "outDir": "dist",
+        "declarationDir": "dist"
     },
     "include": [
         "src",
         "**/*.ts",
-        "**/*.tsx"
+        "**/*.tsx",
+        "config"
     ],
     "references": [
         {

@@ -212,7 +212,7 @@ export const themeOptions: ThemeOptions = {
     },
 };
 
-export const appTheme = createTheme(themeOptions);
+const siglo21Theme = createTheme(themeOptions);
 
 export const darkTheme = createTheme({
     ...themeOptions,
@@ -230,3 +230,5 @@ export const darkTheme = createTheme({
         },
     },
 });
+
+export default siglo21Theme;
