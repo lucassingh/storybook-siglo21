@@ -19,6 +19,8 @@ import {
     Palette,
     Group,
     CheckCircle,
+    DesignServices,
+    LibraryBooks,
 } from '@mui/icons-material';
 
 function App() {
@@ -74,6 +76,12 @@ function App() {
         "Modales y Dialogs"
     ];
 
+    const linkTo = (url: string): (() => void) => {
+        return () => {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        };
+    };
+
     return (
         <Box sx={{ flexGrow: 1, backgroundColor: 'background.default', minHeight: '100vh' }}>
             <Box sx={{
@@ -109,6 +117,38 @@ function App() {
                         Sistema de diseño unificado para garantizar consistencia, accesibilidad y eficiencia
                         en el desarrollo de aplicaciones de la universidad.
                     </Typography>
+                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
+                        <Button
+                            onClick={linkTo('https://storybook.js.org/')}
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            startIcon={<DesignServices />}
+                            sx={{
+                                px: 4,
+                                py: 1.5,
+                                fontSize: '1.1rem'
+                            }}
+                        >
+                            Ver documentación
+                        </Button>
+                        <Button
+                            onClick={linkTo('https://github.com/lucassingh/storybook-siglo21')}
+                            variant="outlined"
+                            color="inherit"
+                            size="large"
+                            startIcon={<LibraryBooks />}
+                            sx={{
+                                px: 4,
+                                py: 1.5,
+                                fontSize: '1.1rem',
+                                borderColor: 'white',
+                                color: 'white'
+                            }}
+                        >
+                            Ver GitHub
+                        </Button>
+                    </Stack>
                 </Container>
             </Box>
 
@@ -289,7 +329,7 @@ function App() {
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Stack direction="row" spacing={2} justifyContent="flex-end">
                                 <a style={{ color: '#00a98f' }} href="https://storybook.js.org/"><Button color="inherit">Documentación</Button></a>
-                                <a style={{ color: '#00a98f' }} href="https://storybook.js.org/"><Button color="inherit">GitHub</Button></a>
+                                <a style={{ color: '#00a98f' }} href="https://github.com/lucassingh/storybook-siglo21"><Button color="inherit">GitHub</Button></a>
                             </Stack>
                         </Grid>
                     </Grid>
